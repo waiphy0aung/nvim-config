@@ -78,7 +78,14 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
-
+--
+-- nvim_lsp.jedi_language_server.setup {
+--   on_attach = on_attach,
+--   filetypes = { "python" },
+--   cmd = { "jedi-language-server" },
+--   capabilities = capabilities
+-- }
+--
 -- nvim_lsp.eslint.setup {
 --   on_attach = on_attach,
 --   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx",

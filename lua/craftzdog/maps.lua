@@ -37,3 +37,5 @@ keymap.set('n', '<C-t>', '<Cmd>execute v:count . "ToggleTerm"<CR>', { silent = t
 keymap.set('t', '<C-t>', "<Esc><Cmd>ToggleTerm<CR>", { silent = true })
 keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true })
 keymap.set("n", "<C-s>", "<Esc>v:lua.split_term()", { expr = true })
+
+keymap.set("n", "fm", ":lua vim.lsp.buf.format()<Return>")

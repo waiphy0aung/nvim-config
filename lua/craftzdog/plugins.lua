@@ -37,7 +37,7 @@ packer.startup(function(use)
 
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup({
-      size = 13,
+      size = 20,
       open_mapping = [[<C-\>]],
       shade_filetypes = {},
       shade_terminals = true,
@@ -76,5 +76,17 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
   use "mhinz/vim-startify"
-  -- use 'terryma/vim-multiple-cursors'
+  use 'terryma/vim-multiple-cursors'
+  use 't184256/vim-boring'
+  use 'LuRsT/austere.vim'
+  use 'zaki/zazen'
+  use 'ryanpcmcquen/true-monochrome_vim'
+  use 'jaredgorski/Mies.vim'
+  use 'jaredgorski/fogbell.vim'
+  use 'aditya-azad/candle-grey'
+  use 'andreasvc/vim-256noir'
+  use 'owickstrom/vim-colors-paramount'
+  use 'fxn/vim-monochrome'
+  use "pbrisbin/vim-colors-off"
+  use 'danishprakash/vim-yami'
 end)

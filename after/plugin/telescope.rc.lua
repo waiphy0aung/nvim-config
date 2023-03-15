@@ -13,7 +13,7 @@ telescope.setup {
   defaults = {
     mappings = {
       n = {
-        ["q"] = actions.close
+            ["q"] = actions.close
       },
     },
   },
@@ -24,14 +24,14 @@ telescope.setup {
       hijack_netrw = true,
       mappings = {
         -- your custom insert mode mappings
-        ["i"] = {
-          ["<C-w>"] = function() vim.cmd('normal vbd') end,
+            ["i"] = {
+              ["<C-w>"] = function() vim.cmd('normal vbd') end,
         },
-        ["n"] = {
+            ["n"] = {
           -- your custom normal mode mappings
-          ["N"] = fb_actions.create,
-          ["h"] = fb_actions.goto_parent_dir,
-          ["/"] = function()
+              ["N"] = fb_actions.create,
+              ["h"] = fb_actions.goto_parent_dir,
+              ["/"] = function()
             vim.cmd('startinsert')
           end
         },
@@ -52,7 +52,7 @@ vim.keymap.set('n', ';f',
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)
-vim.keymap.set('n', '\\\\', function()
+vim.keymap.set('n', 'mm', function()
   builtin.buffers()
 end)
 vim.keymap.set('n', ';t', function()

@@ -1,6 +1,6 @@
 vim.cmd("autocmd!")
 vim.g.material_style = "deep ocean"
-vim.cmd('colorscheme material')
+vim.cmd('colorscheme off')
 
 -- vim.cmd([["tnoremap" <Esc> <C-\><C-n>]])
 vim.scriptencoding = 'utf-8'
