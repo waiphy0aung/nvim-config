@@ -12,7 +12,7 @@ packer.startup(function(use)
   --   'svrana/neosolarized.nvim',
   --   requires = { 'tjdevries/colorbuddy.nvim' }
   -- }
-  use 'nvim-lualine/lualine.nvim'       -- Statusline
+  -- use 'nvim-lualine/lualine.nvim'       -- Statusline
   use 'nvim-lua/plenary.nvim'           -- Common utilities
   use 'onsails/lspkind-nvim'            -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer'              -- nvim-cmp source for buffer words
@@ -59,11 +59,14 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  use { 'numToStr/Comment.nvim',
-    requires = {
-      'JoosepAlviste/nvim-ts-context-commentstring'
-    }
-  }
+  use 'tpope/vim-commentary'
+  use 'mxw/vim-jsx'
+  use 'suy/vim-context-commentstring'
+  -- use { 'numToStr/Comment.nvim',
+  --   requires = {
+  --     'JoosepAlviste/nvim-ts-context-commentstring'
+  --   }
+  -- }
   -- use 'norcalli/nvim-colorizer.lua'
   use 'folke/zen-mode.nvim'
   use({
@@ -89,4 +92,6 @@ packer.startup(function(use)
   use 'fxn/vim-monochrome'
   use "pbrisbin/vim-colors-off"
   use 'danishprakash/vim-yami'
+  use 'nyoom-engineering/oxocarbon.nvim'
+  use 'Jorengarenar/vim-darkness'
 end)

@@ -17,6 +17,8 @@ require 'lspconfig'.jedi_language_server.setup {
   filetypes = { 'python' }
 }
 
+-- require 'lspconfig'.eslint_d.setup {}
+
 -- lspconfig.setup {
 --   automatic_installation = true
 -- }

@@ -39,3 +39,4 @@ keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true })
 keymap.set("n", "<C-s>", "<Esc>v:lua.split_term()", { expr = true })
 
 keymap.set("n", "fm", ":lua vim.lsp.buf.format()<Return>")
+keymap.set("n", "fjsm", ":%!jq .<Return>")
