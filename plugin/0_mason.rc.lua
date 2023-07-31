@@ -17,6 +17,11 @@ require 'lspconfig'.jedi_language_server.setup {
   filetypes = { 'python' }
 }
 
+require 'lspconfig'.phpactor.setup {
+  cmd = { "phpactor", "language_server" },
+  filetypes = { 'php' }
+}
+
 -- require 'lspconfig'.eslint_d.setup {}
 
 -- lspconfig.setup {

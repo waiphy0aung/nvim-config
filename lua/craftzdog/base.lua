@@ -1,9 +1,9 @@
 vim.cmd("autocmd!")
 vim.g.material_style = "deep ocean"
--- vim.cmd('colorscheme material')
+vim.cmd('color material')
 -- vim.cmd('colorscheme off')
 -- vim.cmd('colorscheme oxocarbon')
-vim.cmd('colorscheme darkness')
+vim.cmd('colorscheme lunaperche')
 
 -- vim.cmd([["tnoremap" <Esc> <C-\><C-n>]])
 vim.scriptencoding = 'utf-8'
@@ -35,6 +35,10 @@ vim.opt.wrap = false         -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
+
+vim.opt.foldlevel = 20
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
