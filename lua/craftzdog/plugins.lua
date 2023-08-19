@@ -31,9 +31,9 @@ packer.startup(function(use)
     })
   end }
 
-  use { 'akinsho/git-conflict.nvim', tag = "*", config = function()
-    require('git-conflict').setup()
-  end }
+  -- use { 'akinsho/git-conflict.nvim', tag = "*", config = function()
+  -- require('git-conflict').setup()
+  -- end }
 
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup({
@@ -54,7 +54,7 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  use 'kyazdani42/nvim-web-devicons' -- File icons
+  -- use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
@@ -75,6 +75,7 @@ packer.startup(function(use)
   })
   use 'akinsho/nvim-bufferline.lua'
   -- use 'github/copilot.vim'
+  -- use 'ap/vim-css-color'
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
