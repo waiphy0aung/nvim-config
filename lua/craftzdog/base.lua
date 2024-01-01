@@ -1,6 +1,6 @@
 vim.cmd("autocmd!")
 vim.g.material_style = "deep ocean"
-vim.cmd('set formatprg=jq')
+-- vim.cmd('set formatprg=jq')
 -- vim.cmd('color material')
 vim.cmd('colorscheme off')
 -- vim.cmd('colorscheme oxocarbon')
@@ -13,6 +13,7 @@ vim.opt.fileencoding = 'utf-8'
 
 -- vim.wo.number = true
 
+
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
@@ -21,7 +22,7 @@ vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 0
--- vim.opt.guicursor = "n-v-c-i:hor"
+vim.opt.guicursor = "n-v-c:block,i:hor20-Cursor2/lCursor2"
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.shell = 'zsh'
@@ -53,3 +54,6 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }
+vim.opt.termguicolors = true
+vim.cmd('hi Cursor2 guifg=#000000 guibg=#000000')
+vim.cmd('syntax off')

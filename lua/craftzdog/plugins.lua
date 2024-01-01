@@ -24,8 +24,16 @@ packer.startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use { 'marko-cerovac/material.nvim', tag = "*", config = function()
-    require("material").setup({
-      custom_color = function(colors)
+    local material = require 'material'
+    local colors = require 'material.colors'
+    material.setup({
+      custom_highlights = {
+        YourHighlightGroup = {
+          bg = "#000000"
+        }
+      },
+
+      custom_colors = function(colors)
         colors.editor.bg = "#000000"
       end
     })
@@ -81,18 +89,18 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
   use "mhinz/vim-startify"
   use 'terryma/vim-multiple-cursors'
-  use 't184256/vim-boring'
-  use 'LuRsT/austere.vim'
-  use 'zaki/zazen'
-  use 'ryanpcmcquen/true-monochrome_vim'
-  use 'jaredgorski/Mies.vim'
-  use 'jaredgorski/fogbell.vim'
-  use 'aditya-azad/candle-grey'
-  use 'andreasvc/vim-256noir'
-  use 'owickstrom/vim-colors-paramount'
-  use 'fxn/vim-monochrome'
-  use "pbrisbin/vim-colors-off"
-  use 'danishprakash/vim-yami'
-  use 'nyoom-engineering/oxocarbon.nvim'
-  use 'Jorengarenar/vim-darkness'
+  -- use 't184256/vim-boring'
+  -- use 'LuRsT/austere.vim'
+  -- use 'zaki/zazen'
+  -- use 'ryanpcmcquen/true-monochrome_vim'
+  -- use 'jaredgorski/Mies.vim'
+  -- use 'jaredgorski/fogbell.vim'
+  -- use 'aditya-azad/candle-grey'
+  -- use 'andreasvc/vim-256noir'
+  -- use 'owickstrom/vim-colors-paramount'
+  -- use 'fxn/vim-monochrome'
+  use { "pbrisbin/vim-colors-off" }
+  -- use 'danishprakash/vim-yami'
+  -- use 'nyoom-engineering/oxocarbon.nvim'
+  -- use 'Jorengarenar/vim-darkness'
 end)

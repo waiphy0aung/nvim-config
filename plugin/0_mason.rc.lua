@@ -70,6 +70,24 @@ require 'lspconfig'.phpactor.setup {
   filetypes = { 'php' }
 }
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require 'lspconfig'.html.setup {
+  capabilities = capabilities,
+  cmd = { "vscode-html-language-server", "--stdio" },
+  filetypes = { "html" },
+  init_options = {
+    configurationSection = { "html", "css", "javascript" },
+    embeddedLanguages = {
+      css = true,
+      javascript = true
+    },
+    provideFormatter = true
+  },
+  single_file_support = true
+}
+
 -- require 'lspconfig'.custom_elements_ls.setup {
 --   cmd = { "custom_elements_ls", "--stdio" },
 --   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx",
